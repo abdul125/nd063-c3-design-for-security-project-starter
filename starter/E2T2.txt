@@ -1,3 +1,64 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
+UnauthorizedAccess:EC2/SSHBruteForce
+
+**CIS AWS Foundations Benchmark result:
+CRITICAL	CIS.1.12	Ensure no root account access key exists
+CRITICAL	CIS.1.13	Ensure MFA is enabled for the root" account"
+CRITICAL	CIS.1.14	Ensure hardware MFA is enabled for the root" account"
+CRITICAL	CIS.2.3	Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible
+HIGH    	CIS.1.22	Ensure IAM policies that allow full *:*" administrative privileges are not created"
+HIGH	    CIS.2.1	Ensure CloudTrail is enabled in all regions
+HIGH	    CIS.4.1	Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+HIGH	    CIS.4.2	Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+HIGH	    CIS.4.3	Ensure the default security group of every VPC restricts all traffic
+MEDIUM	CIS.1.2	Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password
+
+**AWS Foundational Security Best Practices v1.0.0:
+HIGH	CloudFront.1	CloudFront distributions should have a default root object configured
+HIGH	CloudTrail.1	CloudTrail should be enabled and configured with at least one multi-region trail
+CRITICAL	CodeBuild.1	CodeBuild GitHub or Bitbucket source repository URLs should use OAuth
+CRITICAL	CodeBuild.2	CodeBuild project environment variables should not contain clear text credentials
+CRITICAL	DMS.1	Database Migration Service replication instances should not be public
+CRITICAL	EC2.1	EBS snapshots should not be public, determined by the ability to be restorable by anyone
+HIGH	EC2.18	Security groups should only allow unrestricted incoming traffic for authorized ports
+CRITICAL	EC2.19	Security groups should not allow unrestricted access to ports with high risk
+HIGH	EC2.2	The VPC default security group should not allow inbound and outbound traffic
+HIGH	EC2.8	EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
+HIGH	EC2.9	EC2 instances should not have a public IPv4 address
+HIGH	ECS.1	Amazon ECS task definitions should have secure networking modes and user definitions.
+HIGH	ECS.2	ECS services should not have public IP addresses assigned to them automatically
+HIGH	EMR.1	Amazon Elastic MapReduce cluster master nodes should not have public IP addresses
+CRITICAL	ES.2	Elasticsearch domains should be in a VPC
+HIGH	ElasticBeanstalk.2	Elastic Beanstalk managed platform updates should be enabled
+HIGH	GuardDuty.1	GuardDuty should be enabled
+HIGH	IAM.1	IAM policies should not allow full *" administrative privileges"
+CRITICAL	IAM.4	IAM root user access key should not exist
+CRITICAL	IAM.6	Hardware MFA should be enabled for the root user
+CRITICAL	KMS.3	AWS KMS keys should not be deleted unintentionally
+CRITICAL	Lambda.1	Lambda function policies should prohibit public access
+CRITICAL	RDS.1	RDS snapshot should be private
+HIGH	RDS.13	RDS automatic minor version upgrades should be enabled
+HIGH	RDS.18	RDS instances should be deployed in a VPC
+CRITICAL	RDS.2	RDS DB Instances should prohibit public access, determined by the PubliclyAccessible configuration
+CRITICAL	Redshift.1	Amazon Redshift clusters should prohibit public access
+CRITICAL	S3.2	S3 buckets should prohibit public read access
+CRITICAL	S3.3	S3 buckets should prohibit public write access
+HIGH	S3.6	S3 permissions granted to other AWS accounts in bucket policies should be restricted
+HIGH	S3.8	S3 Block Public Access setting should be enabled at the bucket-level
+HIGH	SSM.2	EC2 instances managed by Systems Manager should have a patch compliance status of COMPLIANT after a patch installation
+CRITICAL	SSM.4	SSM documents should not be public
+HIGH	SageMaker.1	Amazon SageMaker notebook instances should not have direct internet access
+
+
+**Amazon Inspector:
+Medium	1.64043E+12	On instance i-068881b6fabbe416d, process 'systemd-netwo' is listening on UDP port 68 which is associated with 'DHCP' and is reachable from the internet
+Medium	1.64043E+12	No password complexity mechanism or restrictions are configured on instance i-068881b6fabbe416d in your assessment target. This allows users to set simple passwords, thereby increasing the chances of unauthorized users gaining access and misusing accounts.
+Medium	1.64043E+12	On instance i-068881b6fabbe416d, process 'sshd' is listening on TCP port 22 which is associated with 'SSH' and is reachable from the internet
+Medium	1.64043E+12	Instance i-068881b6fabbe416d is configured to allow users to log in with root credentials over SSH, without having to use a command authenticated by a public key. This increases the likelihood of a successful brute-force attack.
+Medium	1.64043E+12	On instance i-068881b6fabbe416d, process 'sshd' is listening on TCP port 22 which is associated with 'SSH' and is reachable from the internet
+Medium	1.64043E+12	Minimum length for passwords is not configured on instance i-068881b6fabbe416d in your assessment target.
+Medium	1.64043E+12	On instance i-068881b6fabbe416d, process 'systemd-netwo' is listening on UDP port 68 which is associated with 'DHCP' and is reachable from the internet
+Medium	1.64043E+12	Instance i-068881b6fabbe416d  is configured to support password authentication over SSH. Password authentication is susceptible to brute-force attacks and should be disabled in favor of key-based authentication where possible.
+
 Bonus - provide recommendations on how to remediate the vulnerabilities.
