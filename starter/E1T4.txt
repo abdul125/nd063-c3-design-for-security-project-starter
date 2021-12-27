@@ -6,6 +6,3 @@ justification 1: web service instance should be in private instance so that not 
 # Poor practice 2: Web Serverice Security Group (SG) ALLOWS all ingress traffic to Web service instance
 justification 2: in this senario, the instance can get thro Application Load-balancer and directly from IG. Set SG to web service to get ingress traffic
 from Application Load-balance (ALB)
-
-# Poor practice 1: the web service instance is in Public subnet 
-
