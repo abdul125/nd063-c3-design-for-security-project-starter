@@ -1,7 +1,6 @@
 # Cloud Security - Secure the Recipe Vault Web Application
  
 In this project, you will:
- 
 * Deploy and assess a simple web application environment’s security posture
 * Test the security of the environment by simulating attack scenarios and exploiting cloud configuration vulnerabilities
 * Implement monitoring to identify insecure configurations and malicious activity 

@@ -50,7 +50,6 @@ HIGH	SSM.2	EC2 instances managed by Systems Manager should have a patch complian
 CRITICAL	SSM.4	SSM documents should not be public
 HIGH	SageMaker.1	Amazon SageMaker notebook instances should not have direct internet access
 
-
 **Amazon Inspector:
 Medium	1.64043E+12	On instance i-068881b6fabbe416d, process 'systemd-netwo' is listening on UDP port 68 which is associated with 'DHCP' and is reachable from the internet
 Medium	1.64043E+12	No password complexity mechanism or restrictions are configured on instance i-068881b6fabbe416d in your assessment target. This allows users to set simple passwords, thereby increasing the chances of unauthorized users gaining access and misusing accounts.

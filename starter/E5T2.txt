@@ -1,13 +1,26 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+ -Terrascan or Cloudsploit
 
 ### Example vulnerability
+ - it can detecte the misconfigurations of Security Groups
 
 ##Scan AMI’s or containers for OS vulnerabilities
+ -  Anchor
+ - Palo Alto /twistlock, which is enterprise
 
 ### Example vulnerability
+    -Published Common Vulnerabilities and Exposures (CVEs).
+    -Vulnerabilities from misconfigurations.
+    -Malware
+    -Zero day vulnerabilities
+    -Secrets
+#https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin-compute/vulnerability_management/scan_reports.html
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
-
+   - AWS provide native solution/tools such as AWS Config ,AWS Inspect, AWS Security Hub
+   - there are other Security Information and Event Management tools such as Splunk
 ### Example vulnerability
+- weak credetials management such as not password rotation
+- Accounts with disabled MFA
